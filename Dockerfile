@@ -5,7 +5,7 @@
 FROM eternnoir/ubuntu-java:oracle-java8
 MAINTAINER Andy Chuang "andy.chuang@mirlab.org"
 
-ARG jenkins_version=latest
+ENV jenkins_version 2.109
 
 RUN apt-get update && apt-get -y upgrade  && apt-get clean
 ADD http://mirrors.jenkins-ci.org/war/$jenkins_version/jenkins.war /opt/jenkins.war
