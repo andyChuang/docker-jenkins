@@ -1,5 +1,5 @@
 # docker-jenkins
-Always get latest version of jenkins
+Get version 2.109 of jenkins
 
 ## Quick Start
 ```docker run -ti -p 8080:8080 scorpion2272/docker-jenkins```
