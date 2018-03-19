@@ -5,10 +5,10 @@
 FROM eternnoir/ubuntu-java:oracle-java8
 MAINTAINER Andy Chuang "andy.chuang@mirlab.org"
 
-ENV JENKINS_VERSION latest
+ARG jenkins_version=latest
 
 RUN apt-get update && apt-get -y upgrade  && apt-get clean
-ADD http://mirrors.jenkins-ci.org/war/$JENKINS_VERSION/jenkins.war /opt/jenkins.war
+ADD http://mirrors.jenkins-ci.org/war/$jenkins_version/jenkins.war /opt/jenkins.war
 RUN chmod 644 /opt/jenkins.war
 ENV JENKINS_HOME /jenkins
 
